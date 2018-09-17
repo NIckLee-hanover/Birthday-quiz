@@ -34,6 +34,8 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 
+months = list (["January", "Febuary", "March", "April", "May", "June", "Juyl", "August", "September", "October", "November", "December"])
+
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 
@@ -43,7 +45,6 @@ month1 = input ("Hi " + name + ", what was the name of the month you were born i
 #day = int (input ("And the day? "))
 month2 = datetime.today().month
 
-print (todaymonth)
-print (month_name[10])
+
 
 
