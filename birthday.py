@@ -33,15 +33,17 @@ Example Session
 """
 from datetime import datetime
 from calendar import month_name
+
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 
-
 name = input ("Hello, what is your name? ")
-month = input ("Hi " + name + ", what was the name of the month you were born in? ")
-year = input ("And what year were you born in, " + name + "? ")
-day = input ("And the day? ")
+month1 = input ("Hi " + name + ", what was the name of the month you were born in? ")
+#year = int (input ("And what year were you born in, " + name + "? "))
+#day = int (input ("And the day? "))
+month2 = datetime.today().month
 
-
+print (todaymonth)
+print (month_name[10])
 
 
