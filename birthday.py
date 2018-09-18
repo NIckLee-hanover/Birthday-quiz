@@ -39,11 +39,29 @@ months = list (["January", "Febuary", "March", "April", "May", "June", "Juyl", "
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 
+
 name = input ("Hello, what is your name? ")
 month1 = input ("Hi " + name + ", what was the name of the month you were born in? ")
 #year = int (input ("And what year were you born in, " + name + "? "))
 #day = int (input ("And the day? "))
 month2 = datetime.today().month
+""" this one of my failed attemps at getting this to work, I resorted to my weak JS knowledge.
+x = 0
+while (month1 != str(months[x]) for x in range (0,12)) and x <= 12:
+     print (x)
+     x = x + 1
+month1 = x
+print (month1)
+"""
+num1 = 0
+while num1 < 13:
+    if month1 == months[num1]:
+        month1 = num1
+    if num1 == 12:
+        print ("Sorry I didn't understand that month name!")
+        break
+    num1 += 1
+print (month1)
 
 
 
