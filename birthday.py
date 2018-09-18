@@ -1,7 +1,7 @@
 """
 birthday.py
 Author: Nick Lee
-Credit: <list sources used, if any>
+Credit: none
 Assignment: Birthday quiz
 
 Your program will ask the user the following questions, in this order:
