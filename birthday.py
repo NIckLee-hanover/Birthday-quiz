@@ -30,6 +30,14 @@ Example Session
   And what year were you born in, Eric? 1972
   And the day? 11
   Eric, you are a fall baby of the stone age.
+//\\//\\//\\
+this one of my failed attemps at getting this to work that i didn't delete.
+x = 0
+while (month1 != str(months[x]) for x in range (0,12)) and x <= 12:
+     print (x)
+     x = x + 1
+month1 = x
+print (month1)
 """
 from datetime import datetime
 from calendar import month_name
@@ -45,28 +53,19 @@ month1 = input ("Hi " + name + ", what was the name of the month you were born i
 year = int (input ("And what year were you born in, " + name + "? "))
 day = int (input ("And the day? "))
 
-
-""" this one of my failed attemps at getting this to work, I resorted to my weak JS knowledge.
-x = 0
-while (month1 != str(months[x]) for x in range (0,12)) and x <= 12:
-     print (x)
-     x = x + 1
-month1 = x
-print (month1)
-"""
-
-
+# converts the month name into a number
 num1 = 0
 while num1 < 13:
     if month1 == months[num1]:
-        month1 = num1
+        month1 = int(num1)
         break
     if num1 == 12:
-        print ("Sorry I didn't understand that month name!")
+        print ("Sorry I can't understand that month name!")
         break
     num1 += 1
 
-if month1 == 11 or month1 < 1:
+# decides what month zone you were born in
+if month1 == 11 or month1 < 2:
     baby = "winter"
 elif month1 > 1 and month1 < 5:
     baby = "spring"
@@ -74,9 +73,23 @@ elif month1 > 4 and month1 < 8:
     baby = "summer"
 else:
     baby = "fall"
-print (baby)
 
-#print ("You are a {0} of the {1}".format(month1, year))    Final printin
-
+# decides what generation you were born in
+if year < 1980:
+    generation = "stone age"
+elif year < 1990:
+    generation = "eighties"
+elif year < 2000:
+    generation = "nineties"
+else:
+    generation = "two thousands"
+    
+# prints the text
+if month1 + 1 == todaymonth and day == todaydate:
+    print ("Happy birthday!")
+elif month1 == 9 and day == 31:
+    print ("You were born on Halloween!")
+else:
+    print ("You are a {0} baby of the {1}".format(baby, generation))
 
 
