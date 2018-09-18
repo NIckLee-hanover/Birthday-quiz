@@ -75,6 +75,7 @@ else:
     baby = "fall"
 
 # decides what generation you were born in
+
 if year < 1980:
     generation = "stone age"
 elif year < 1990:
@@ -83,7 +84,7 @@ elif year < 2000:
     generation = "nineties"
 else:
     generation = "two thousands"
-    
+
 # prints the text
 if month1 + 1 == todaymonth and day == todaydate:
     print ("Happy birthday!")
