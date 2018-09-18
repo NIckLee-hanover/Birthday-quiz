@@ -43,7 +43,7 @@ from datetime import datetime
 from calendar import month_name
 
 # monts list
-months = list (["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "extra"])
+months = list (["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "extra"])
 
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
