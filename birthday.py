@@ -1,8 +1,8 @@
 """
 birthday.py
-Author: <your name here>
+Author: Nick Lee
 Credit: <list sources used, if any>
-Assignment:
+Assignment: Birthday quiz
 
 Your program will ask the user the following questions, in this order:
 
@@ -42,12 +42,13 @@ print (month1)
 from datetime import datetime
 from calendar import month_name
 
+# monts list
 months = list (["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "extra"])
 
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 
-
+# sets variables
 name = input ("Hello, what is your name? ")
 month1 = input ("Hi " + name + ", what was the name of the month you were born in? ")
 year = int (input ("And what year were you born in, " + name + "? "))
