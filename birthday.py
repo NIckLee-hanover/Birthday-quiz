@@ -34,7 +34,7 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 
-months = list (["January", "Febuary", "March", "April", "May", "June", "Juyl", "August", "September", "October", "November", "December"])
+months = list (["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "extra"])
 
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
@@ -42,9 +42,10 @@ todaydate = datetime.today().day
 
 name = input ("Hello, what is your name? ")
 month1 = input ("Hi " + name + ", what was the name of the month you were born in? ")
-#year = int (input ("And what year were you born in, " + name + "? "))
-#day = int (input ("And the day? "))
-month2 = datetime.today().month
+year = int (input ("And what year were you born in, " + name + "? "))
+day = int (input ("And the day? "))
+
+
 """ this one of my failed attemps at getting this to work, I resorted to my weak JS knowledge.
 x = 0
 while (month1 != str(months[x]) for x in range (0,12)) and x <= 12:
@@ -53,16 +54,29 @@ while (month1 != str(months[x]) for x in range (0,12)) and x <= 12:
 month1 = x
 print (month1)
 """
+
+
 num1 = 0
 while num1 < 13:
     if month1 == months[num1]:
         month1 = num1
+        break
     if num1 == 12:
         print ("Sorry I didn't understand that month name!")
         break
     num1 += 1
-print (month1)
 
+if month1 == 11 or month1 < 1:
+    baby = "winter"
+elif month1 > 1 and month1 < 5:
+    baby = "spring"
+elif month1 > 4 and month1 < 8:
+    baby = "summer"
+else:
+    baby = "fall"
+print (baby)
+
+#print ("You are a {0} of the {1}".format(month1, year))    Final printin
 
 
 
