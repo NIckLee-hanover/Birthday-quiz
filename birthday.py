@@ -92,6 +92,6 @@ if month1 + 1 == todaymonth and day == todaydate:
 elif month1 == 9 and day == 31:
     print ("You were born on Halloween!")
 else:
-    print ("{2}, You are a {0} baby of the {1}".format(baby, generation, name))
+    print ("{2}, you are a {0} baby of the {1}.".format(baby, generation, name))
 
 
