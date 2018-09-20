@@ -1,7 +1,7 @@
 """
 birthday.py
 Author: Nick Lee
-Credit: none
+Credit: Khan Academy for teaching me while loops
 Assignment: Birthday quiz
 
 Your program will ask the user the following questions, in this order:
